@@ -1,0 +1,57 @@
+.home{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows:12fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFE780;
+    img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 3;
+        width: 98%;
+        height: 98%;
+    }
+    .card-container{
+        grid-column-start:2;
+        grid-column-end: 3;
+        display: flex;
+        align-self: center;
+        margin-top: 20%;
+        width: 100%;
+        height: 35%;
+        background-color: rgba($color: #FFFFFF, $alpha: 0.55);
+        border-radius: 18px 0px 0px 140px;
+        align-items: center;
+        .card-content{
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+            width: 55%;
+            height: 85%;
+            margin-left: 13%;
+            h1{
+                font-family: "Franchise Free", helvetica, sans-serif;
+                font-size: 70px;
+                font-weight: bold;
+                color:#B19B3B;
+                span{
+                    color: #ECC930;
+                }
+            }
+            p{
+                font-family: Helvetica,Arial,sans-serif;
+                font-weight: bold;
+                text-align: justify;
+                color: #5D5326;
+            }
+        }
+    }
+    .chao{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start:2;
+        grid-row-end:3;
+        background-color: #E2C191;
+    }
+}
