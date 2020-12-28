@@ -1,6 +1,7 @@
 import React from "react";
 import logoUC from "./img/logoUC.svg";
 import desktop from "./img/desktop.svg";
+import bgConversor from "./img/bgConversor.svg";
 function App(){
   return(
     <div className="App">
@@ -15,7 +16,7 @@ function App(){
           </ul>
         </nav>
       </header>
-      <section className="home">
+      <section id="home">
         <div className="chao"></div>
         <img src={desktop} alt="Desktop"/>
         <div className="card-container">
@@ -30,6 +31,24 @@ function App(){
             </p>
           </div>
         </div>
+      </section>
+      <section id="conversor">
+        <img src={bgConversor} alt="" draggable="false"/>
+        <form className="form-conversor">
+          <label htmlFor="textAreaConversor">
+            <title draggable="false"><h2>CONVERSOR DE CARACTERES</h2></title>
+          </label>
+            <textarea name="textAreaConversor" id="textAreaConversor" className="textAreaConversor"></textarea>
+            <section className="buttons">
+          <button type="button" className="formatin-out">ALTERNADO</button>
+          <button type="button" className="formatin-out">MINÚSCILA</button>
+          <button type="button" className="formatin-out">MAIÚSCULA</button>
+          <button type="button" className="formatin-out">SELECIONA TEXTO</button>
+          <button type="button" className="formatin-out">INVERTER TEXTO</button>
+          <button type="button" className="formatin-out">PRIMEIRA LETRA DE CADA PALAVRA</button>        
+        </section>
+        </form>
+
       </section>
     </div>
   );

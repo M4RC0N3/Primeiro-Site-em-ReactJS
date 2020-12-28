@@ -53,6 +53,7 @@ table {
 }
 
 header {
+  z-index: 1000;
   position: fixed;
   background-color: white;
   height: 8%;
@@ -95,11 +96,12 @@ header nav ul {
 }
 
 header nav ul li {
+  cursor: pointer;
   font-family: "MADE TOMMY", sans-serif;
   font-size: 1.2rem;
 }
 
-.home {
+#home {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1.5fr 1fr;
@@ -111,7 +113,7 @@ header nav ul li {
   background-color: #FFE780;
 }
 
-.home img {
+#home img {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
@@ -122,7 +124,7 @@ header nav ul li {
   height: 98%;
 }
 
-.home .card-container {
+#home .card-container {
   -ms-grid-column: 2;
       grid-column-start: 2;
   grid-column-end: 3;
@@ -141,7 +143,7 @@ header nav ul li {
           align-items: center;
 }
 
-.home .card-container .card-content {
+#home .card-container .card-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 2fr;
@@ -151,25 +153,25 @@ header nav ul li {
   margin-left: 13%;
 }
 
-.home .card-container .card-content h1 {
+#home .card-container .card-content h1 {
   font-family: "Franchise Free", helvetica, sans-serif;
   font-size: 70px;
   font-weight: bold;
   color: #B19B3B;
 }
 
-.home .card-container .card-content h1 span {
+#home .card-container .card-content h1 span {
   color: #ECC930;
 }
 
-.home .card-container .card-content p {
+#home .card-container .card-content p {
   font-family: Helvetica,Arial,sans-serif;
   font-weight: bold;
   text-align: justify;
   color: #5D5326;
 }
 
-.home .chao {
+#home .chao {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -177,5 +179,128 @@ header nav ul li {
       grid-row-start: 2;
   grid-row-end: 3;
   background-color: #E2C191;
+}
+
+#conversor {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5.2fr 1fr;
+      grid-template-columns: 1fr 5.2fr 1fr;
+  -ms-grid-rows: 1.7fr 5fr 2fr;
+      grid-template-rows: 1.7fr 5fr 2fr;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3E24BC), to(#7F63FF));
+  background-image: linear-gradient(#3E24BC, #7F63FF);
+}
+
+#conversor img {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  z-index: 0;
+}
+
+#conversor .form-conversor {
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5.2fr 1fr;
+      grid-template-columns: 1fr 5.2fr 1fr;
+  -ms-grid-rows: 1.7fr 4.5fr 2.1fr;
+      grid-template-rows: 1.7fr 4.5fr 2.1fr;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#conversor .form-conversor label {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#conversor .form-conversor label title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+#conversor .form-conversor label title h2 {
+  color: white;
+  margin-top: 7.5%;
+  text-align: center;
+  font-family: "Franchise Free", Arial, Helvetica, sans-serif;
+  font-size: 75px;
+}
+
+#conversor .form-conversor .textAreaConversor {
+  width: 95%;
+  height: 90%;
+  resize: none;
+  outline: none;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 36px;
+  padding: 2%;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+
+#conversor .form-conversor .buttons {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1%;
+  height: 60%;
+}
+
+#conversor .form-conversor .buttons .formatin-out {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: 40%;
+  font-family: "Product Sans", Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #8876DC;
+  font-size: 16px;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+#conversor .form-conversor .buttons .formatin-out:hover {
+  background-color: #FCD632;
 }
 /*# sourceMappingURL=homeMain.css.map */
